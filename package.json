@@ -10,12 +10,12 @@
   "contributes": {
     "themes": [
       {
-        "label": "Stay On Theme",
+        "label": "Stay On",
         "uiTheme": "vs-dark",
         "path": "./themes/default.json"
       },
       {
-        "label": "Stay On Theme - Purple Dark",
+        "label": "Stay On - Purple",
         "uiTheme": "vs-dark",
         "path": "./themes/purple.json"
       }
