@@ -1,0 +1,67 @@
+{
+  "name": "stay-on-theme",
+  "displayName": "Stay On — Theme",
+  "description": "An elegant and minimalist dark theme for VS Code that provides a pleasant and productive experience.",
+  "private": true,
+  "publisher": "pablo1v",
+  "version": "0.0.0",
+  "icon": "resources/icon.png",
+  "packageManager": "yarn@4.3.1",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Stay On Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/default.json"
+      },
+      {
+        "label": "Stay On Theme - Purple Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/purple.json"
+      }
+    ]
+  },
+  "categories": [
+    "Themes"
+  ],
+  "sponsor": {
+    "url": "https://github.com/sponsors/pablo1v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo1v/stay-on-theme.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": "^16"
+  },
+  "scripts": {
+    "publish": "vsce publish --no-yarn",
+    "publish:pre": "vsce publish --pre-release --no-yarn",
+    "vscode:prepublish": "yarn build",
+    "build": "yarn type-check && tsx src/build",
+    "build:watch": "yarn tsx --watch src/build",
+    "type-check": "tsc",
+    "lint": "eslint ./",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --check \"./**/*.{json,js,ts}\"",
+    "format:fix": "prettier --write \"./**/*.{json,js,ts}\""
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "@vscode/vsce": "^2.29.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "polished": "^4.2.2",
+    "prettier": "3.2.2",
+    "tsx": "4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+.yarn/
+src/
+themes/.gitkeep
+.vscode/**
+.vscode-test/**
+.gitignore
+.yarnrc.yml
+*.js
+.czrc
+renovate.json
+tsconfig.eslint.json
+tsconfig.json
+vsc-extension-quickstart.md

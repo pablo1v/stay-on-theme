@@ -1,0 +1,60 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>pablo1v/renovate-config:semanticCommit",
+
+    ":ignoreModulesAndTests",
+
+    "group:monorepos",
+
+    "replacements:all",
+    "workarounds:all",
+
+    "schedule:earlyMondays",
+
+    "npm:unpublishSafe",
+    "helpers:disableTypesNodeMajor"
+  ],
+  "ignoreTests": true,
+  "updateNotScheduled": true,
+  "dependencyDashboard": true,
+  "separateMinorPatch": true,
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true,
+  "timezone": "America/Sao_Paulo",
+  "prCreation": "not-pending",
+  "labels": ["dependencies"],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["dependencies", "security"]
+  },
+  "lockFileMaintenance": {
+    "extends": ["schedule:monthly"],
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["engines", "peerDependencies"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["*"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchDepTypes": ["engines", "peerDependencies"],
+      "rangeStrategy": "auto"
+    },
+    {
+      "matchUpdateTypes": ["minor", "major"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchUpdateTypes": ["pin", "pinDigest", "digest", "patch"],
+      "automerge": true,
+      "prPriority": 1,
+      "prCreation": "immediate"
+    }
+  ]
+}

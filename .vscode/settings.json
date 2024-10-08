@@ -1,0 +1,21 @@
+{
+  "files.eol": "\n",
+  "eslint.experimental.useFlatConfig": false,
+  "eslint.useFlatConfig": false,
+  "prettier.configPath": "prettier.config.js",
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  }
+}
