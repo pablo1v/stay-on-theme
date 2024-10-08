@@ -4,7 +4,7 @@
   "description": "An elegant and minimalist dark theme for VS Code that provides a pleasant and productive experience.",
   "private": true,
   "publisher": "pablo1v",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "icon": "resources/icon.png",
   "packageManager": "yarn@4.3.1",
   "contributes": {
